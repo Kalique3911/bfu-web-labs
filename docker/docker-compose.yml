@@ -5,7 +5,10 @@ services:
             - "8080:80"
         volumes:
             - ./code:/code
-            - ./site.conf:/etc/nginx/conf.d/site.conf
+            # - ./site.conf:/etc/nginx/conf.d/site.conf
+            - ./html:/usr/share/nginx/html
+            - ./site1.conf:/etc/nginx/conf.d/site1.conf
+            - ./site2.conf:/etc/nginx/conf.d/site2.conf
         links:
             - php
     php:
